@@ -1,0 +1,385 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --pink: #ff00cc;
+    --pink-dark: #ffffff;
+    --pink-light: #ffffff;
+    --purple: #9b77cf;
+    --text: #000000;
+    --muted: #000000;
+    --white: #fcfafa;
+    --border: #ff00e1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    color: var(--text);
+    background: #f6c1ff;
+}
+
+button, input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.97);
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 7%;
+    background: rgb(253, 145, 255);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--pink-dark);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.admin-btn {
+    border: 1px solid var(--border);
+    background: var(--pink-light);
+    color: var(--pink-dark);
+    padding: 9px 15px;
+    border-radius: 12px;
+}
+
+.container {
+    width: min(1050px, 92%);
+    margin: auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 42px 15px 24px;
+}
+
+.heart {
+    font-size: 52px;
+    color: var(--pink);
+    line-height: 1.4;
+}
+
+.small-title {
+    color: var(--pink-dark);
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.hero h1 {
+    font-size: clamp(28px, 5vw, 43px);
+    margin: 8px 0;
+}
+
+.hero > p:last-child {
+    color: var(--muted);
+    max-width: 540px;
+    margin: auto;
+}
+
+.points-card {
+    background: linear-gradient(135deg, #ff00c3, hsl(293, 100%, 83%));
+    color: rgb(255, 254, 255);
+    text-align: center;
+    padding: 28px 15px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px #d78bb42b;
+}
+
+.points-card > span {
+    font-weight: 700;
+}
+
+.points-number {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+.points-number strong {
+    font-size: 58px;
+    line-height: 1.4;
+}
+
+.points-card p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+.section {
+    margin-top: 38px;
+}
+
+.section h2 {
+    margin-bottom: 3px;
+}
+
+.section-heading p, .muted {
+    color: var(--muted);
+    margin-top: 0;
+}
+
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 18px;
+}
+
+.reward-card {
+    background: rgb(255, 255, 255);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 20px #ac66800a;
+}
+
+.reward-icon {
+    font-size: 35px;
+}
+
+.reward-card h3 {
+    margin: 8px 0 4px;
+}
+
+.reward-card p {
+    color: var(--muted);
+    min-height: 30px;
+    margin: 4px 0 12px;
+    font-size: 14px;
+}
+
+.reward-cost {
+    display: block;
+    color: var(--pink-dark);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.primary-btn, .danger-btn {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 11px;
+    font-weight: 700;
+}
+
+.primary-btn {
+    background: var(--pink);
+    color: white;
+}
+
+.danger-btn {
+    background: #fff0f0;
+    color: #060001;
+}
+
+.reward-card button {
+    width: 100%;
+}
+
+.reward-card button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.redemptions-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.redemption-item {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 15px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.status {
+    color: var(--pink-dark);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.empty {
+    padding: 22px;
+    text-align: center;
+    border: 1px dashed var(--border);
+    border-radius: 15px;
+    color: var(--muted);
+    background: white;
+}
+
+footer {
+    text-align: center;
+    padding: 38px 10px 25px;
+    color: var(--pink-dark);
+    font-weight: 700;
+}
+
+footer p {
+    margin: 3px;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: #25152899;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    z-index: 10;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.modal-box {
+    position: relative;
+    background: #fffafd;
+    border-radius: 22px;
+    padding: 25px;
+    width: min(520px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close-btn {
+    position: absolute;
+    left: 17px;
+    top: 17px;
+    border: none;
+    background: var(--pink-light);
+    color: var(--pink-dark);
+    border-radius: 9px;
+    padding: 7px 11px;
+}
+
+.modal-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline-color: var(--pink);
+    background: white;
+}
+
+.modal-box form .primary-btn {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.error {
+    color: #c53c52;
+    font-size: 14px;
+}
+
+.admin-card {
+    border: 1px solid var(--border);
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 15px;
+}
+
+.admin-card h3 {
+    margin-top: 0;
+}
+
+.button-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.button-row button {
+    flex: 1;
+}
+
+.full-btn {
+    width: 100%;
+}
+
+.admin-request {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.admin-request:last-child {
+    border-bottom: none;
+}
+
+.admin-request button {
+    margin: 7px 4px 0 0;
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #39283a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    z-index: 20;
+    text-align: center;
+    width: max-content;
+    max-width: 90%;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .topbar {
+        padding: 13px 4%;
+    }
+
+    .hero {
+        padding-top: 30px;
+    }
+
+    .points-number strong {
+        font-size: 48px;
+    }
+
+    .modal-box {
+        padding: 20px 15px;
+    }
+
+    .button-row {
+        flex-direction: column;
+    }
+}

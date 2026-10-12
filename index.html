@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>توتي 💗 | عالم المكافآت</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="logo">💗 توتي</div>
+        <button id="adminBtn" class="admin-btn"> 🔐 </button>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="heart">♡</div>
+            <p class="small-title"> TOTY </p>
+            <h1> بلاش طلبات كتير ها 💕</h1>
+            <p>كل حاجة حلوة منك ليها نقطة، خليكي كيوت بقا عشان تكسبي </p>
+        </section>
+
+        <section class="points-card">
+            <span> points ✨</span>
+            <div class="points-number">
+                <strong id="points">0</strong>
+                <span>نقطة</span>
+            </div>
+            <p>كل نقطة ليها حكاية حلوة 💖</p>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <div>
+                    <h2>🎁 مكافآتك يا توتي</h2>
+                    <p> جمعي النقاط واستبدليها باللي بتحبيه.</p>
+                </div>
+            </div>
+            <div id="rewards" class="rewards-grid"></div>
+        </section>
+
+        <section class="section">
+            <h2>💌 طلبات الاستبدال</h2>
+            <p class="muted">المكافآت اللي طلبتيها هتظهر هنا.</p>
+            <div id="redemptions" class="redemptions-list"></div>
+        </section>
+
+        <footer>
+            معمول لتوتي بكل الحب 💗
+            <p>من أحمد ❤️</p>
+        </footer>
+    </main>
+
+    <div id="adminModal" class="modal hidden">
+        <div class="modal-box">
+            <button id="closeAdmin" class="close-btn">✕</button>
+
+            <div id="loginArea">
+                <h2>🔐 لوحة أحمد</h2>
+                <p>دخول صاحب النقاط فقط</p>
+                <form id="loginForm">
+                    <input id="adminPassword" type="password"
+                           placeholder="كلمة مرور الأدمن" required>
+                    <button class="primary-btn" type="submit">دخول</button>
+                </form>
+                <p id="loginError" class="error"></p>
+            </div>
+
+            <div id="dashboard" class="hidden">
+                <h2>لوحة التحكم 👑</h2>
+
+                <div class="admin-card">
+                    <h3>إدارة النقاط</h3>
+                    <p>رصيد توتي الحالي: <strong id="adminPoints">0</strong></p>
+                    <input id="pointAmount" type="number" min="1"
+                           placeholder="عدد النقاط">
+                    <input id="pointReason" type="text"
+                           placeholder="السبب (اختياري)">
+                    <div class="button-row">
+                        <button id="addPoints" class="primary-btn">+ إضافة نقاط</button>
+                        <button id="removePoints" class="danger-btn">− خصم نقاط</button>
+                    </div>
+                </div>
+
+                <div class="admin-card">
+                    <h3>إضافة مكافأة 🎁</h3>
+                    <input id="rewardName" type="text"
+                           placeholder="اسم المكافأة">
+                    <input id="rewardCost" type="number" min="1"
+                           placeholder="سعرها بالنقاط">
+                    <input id="rewardDescription" type="text"
+                           placeholder="وصف المكافأة">
+                    <button id="addReward" class="primary-btn">إضافة المكافأة</button>
+                 </div>
+
+                 <div class="admin-card">
+                 <h3>إدارة المكافآت 🎁</h3>
+                 <div id="adminRewards"></div>
+                </div>
+
+                <div class="admin-card">
+                    <h3>طلبات توتي 💌</h3>
+                    <div id="adminRedemptions"></div>
+                </div>
+
+                <button id="logoutBtn" class="danger-btn full-btn">تسجيل الخروج</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
