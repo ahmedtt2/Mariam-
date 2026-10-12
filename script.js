@@ -1,4 +1,4 @@
-m
+
 const ADMIN_PASSWORD = "1111";
 const STORAGE_KEY = "toti_rewards_app_v1";
 
